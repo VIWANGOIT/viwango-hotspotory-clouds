@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #060a08;
+  --color-ink-soft: #0b120e;
+  --color-brand: #23c55e;
+  --color-brand-dark: #0f7a45;
+  --color-gold: #f5b301;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background:
+      radial-gradient(900px 500px at 12% -10%, rgba(35, 197, 94, 0.16), transparent 60%),
+      radial-gradient(700px 420px at 95% 0%, rgba(245, 179, 1, 0.1), transparent 55%),
+      var(--color-ink);
+    color: #e6efe9;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: rgba(35, 197, 94, 0.35);
+  }
+}
+
+@utility card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(6px);
+}
+
+@utility field {
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(6, 10, 8, 0.65);
+  padding: 0.6rem 0.75rem;
+  font-size: 0.875rem;
+  color: #e6efe9;
+  outline: none;
+}
+
+@utility field-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(230, 239, 233, 0.55);
+}

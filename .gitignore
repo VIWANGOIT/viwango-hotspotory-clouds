@@ -1,0 +1,20 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vercel/
+
+# Local runtime artifacts
+*.log
+.DS_Store
+.agent_tmp/
